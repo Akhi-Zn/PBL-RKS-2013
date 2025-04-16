@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Check</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">SecureCheck</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="wrapper">
+        <div class="container">
+            <h1>Check Your Security</h1>
+            <p>Ensure your email or password has not been compromised</p>
+            <div class="input-container">
+                <input type="email" id="email" placeholder="Enter your email">
+                <button id="check-btn">Check</button>
+            </div>
+        </div>
+    
+        <div class="result-box hidden" id="result-message"></div>
+    
+        <footer>
+            <div class="teks">🔐 Protect your accounts with strong passwords</div>
+        </footer>    
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
