@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Check</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Secure Check</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+        </nav>
+    </header>
+
+    <section class="main-section">
+        <div class="title-box">
+            <h1>Check Your Security Email</h1>
+            <p>Ensure your email is secure and has not been compromised</p>
+        </div>
+        <form method="POST" class="email-form">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Check</button>
+        </form>
+        {% if result %}
+        <div class="result-box">
+            <h2>Result for "{{ result.email }}"</h2>
+            {% if result.error %}
+                <p class="error">{{ result.error }}</p>
+            {% else %}
+                <ul>
+                    <li><strong>Deliverability:</strong> {{ result.deliverability }}</li>
+                    <li><strong>Valid Format:</strong> {{ result.is_valid_format }}</li>
+                    <li><strong>Disposable:</strong> {{ result.is_disposable }}</li>
+                    <li><strong>MX Record Found:</strong> {{ result.is_mx_found }}</li>
+                </ul>
+            {% endif %}
+        </div>
+        {% endif %}
+    </section>
+
+    <footer>
+        <span>🔒 Protect your accounts with strong passwords</span>
+    </footer>
+
+</body>
+</html>

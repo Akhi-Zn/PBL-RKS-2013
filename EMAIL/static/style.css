@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1a1a2e, #0f3460);
+    background-attachment: fixed;
+    color: white;
+}
+
+header {
+    background-color: #0b2c52;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.title-box {
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin: auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.email-form {
+    margin-top: 30px;
+}
+
+.email-form input {
+    padding: 12px;
+    width: 400px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+}
+
+.email-form button {
+    padding: 12px 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #f1c40f;
+}
+
+.result-box {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.result-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result-box li {
+    margin: 8px 0;
+}
+
+.result-box .error {
+    color: red;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #0b2c52;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
